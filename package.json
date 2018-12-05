@@ -1,0 +1,28 @@
+{
+  "name": "hw_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "models/db.json", "public/assets/img/products/*"
+    ]
+  },
+  "scripts": {
+    "dev": "set PORT=4200&& nodemon index",
+    "start": "set PORT=4200&& node index"
+  },
+  "author": "Olek Unger",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-flash-simple": "0.0.3",
+    "koa-pug": "^3.0.0-2",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.2",
+    "koa-static": "^5.0.0",
+    "lowdb": "^1.0.0",
+    "pug": "^2.0.3"
+  }
+}
