@@ -9,11 +9,6 @@ const auth = require('../middleware/auth');
 router
     .get('/admin', auth, controller.admin)
     .post('/admin/skills', koaBody(), controller.setSkills)
-    .post('/admin/upload', koaBody({
-        multipart: true,
-        formidable: {
-            uploadDir: './public/assets/img/products'
-        }
-    }), controller.setProduct)
+    .post('/admin/upload', upload, controller.setProduct)
 
 module.exports = router;
